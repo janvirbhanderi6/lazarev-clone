@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'CustomUltraLight';
-    src: url('path/to/custom-ultralight-font.woff2') format('woff2'),
-         url('path/to/custom-ultralight-font.woff') format('woff');
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +9,7 @@
 html, body {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 nav {
@@ -65,7 +60,7 @@ nav {
     width: 82%;
     margin-left: -0.1vh;
     top: 100%;
-    border-bottom: 1.5px solid rgba(255, 255, 255, 0.699);
+    border-bottom: 2px solid #666;
     z-index: 9;
 }
 
@@ -200,4 +195,215 @@ nav button svg {
     height: 100vh;
     width: 100vw;
     background-color: #111;
+    position: relative;
+    padding: 0 9.4vw;
+    padding-bottom: 5vw;
+    display: flex;
+    align-items: center;
+    border-top: 1.5px solid #444;
+    justify-content: space-between;
+    z-index: 4;
 }
+
+#page2-left {
+    height: 100%;
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3vw 0;
+}
+
+#page2-left p {
+    font-size: 2vh;
+}
+
+#page2-left h5 {
+    font-weight: 100;
+    font-size: 2.2vh;
+    line-height: 2.8vh;
+}
+
+#page2-right {
+    height: 100%;
+    width: 50%;
+}
+
+.right-elem {
+    position: relative;
+    padding-top: 1.2vw;
+    padding-bottom: 6.5vw;
+    border-bottom: 1.5px solid #444;
+
+}
+
+.right-elem:first-child {
+    padding-top: 2vw;
+}
+
+.right-elem h2 {
+    font-size: 1.2vw;
+    font-weight: 100;
+    line-height: 1.6vw;
+}
+
+.right-elem img {
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0;
+    position: absolute;
+    scale: 0;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    position: relative;
+    background-image: url(https://lazarev.kiev.ua/la24/reel-cover.webp);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+}
+
+.page3-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page3-center .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vw;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.page3-center .icon i {
+    color: black;
+    font-size: 3vw;
+}
+
+.page3-center h5 {
+    font-size: 0.8vw;
+    font-weight: 700;
+    background-color: white;
+    color: black;
+    border-radius: 2vw;
+    padding: 5px 10px;
+    margin-top: 0.7vw;
+    opacity: 0;
+    transition: all ease 0.5s;
+    transform: translateY(12%);
+    text-transform: uppercase;
+}
+
+.page3-center:hover h5 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page3-center:hover {
+    cursor: pointer;
+}
+
+#page3 video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    transform: scaleX(0.6) scaleY(0);
+    opacity: 0;
+    border-radius: 30px;
+    z-index: 99999;
+}
+
+#page4 {
+    display: flex;
+    background-color: #fff;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: 4;
+    padding-top: 5vh;
+}
+
+.page4-left {
+    width: 50%;
+}
+
+.page4-left h1 {
+    color: black;
+    font-size: 6.5vh;
+    line-height: 7.5vh;
+    margin-top: 10vh;
+    margin-left: 6vw;
+}
+
+.page4-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 9vh;
+    padding-top: 6%;
+}
+
+.page4-right h4 {
+    color: rgb(161, 161, 161);
+}
+
+.page4-right p {
+    color: rgb(27, 27, 27);
+    font-size: 3.2vh;
+    line-height: 4.5vh;
+    margin-top: -2.5vh;
+}
+
+#page5 {
+    background-color: #fff;
+    height: 85vh;
+    width: 100vw;
+    position: relative;
+    z-index: 4;
+    padding: 13vh;
+    padding-top: 8vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+}
+
+#page5 h1 {
+    color: black;
+}
+
+#page5 .box {
+    background-color: rgb(242, 242, 242);
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5.5vh; 
+    padding-top: 5vh;
+    text-align: left;
+    
+}
+
+#page5 p {
+    color: rgb(109, 109, 109);
+    font-size: 2vh;
+    margin-top: 10vh;
+}
+
+
